@@ -8,5 +8,7 @@
         </nav>
     </div>
 </header>
-{{ $slot }}
+<div>
+    {{ $slot }}
+</div>
 </x-layouts.app>

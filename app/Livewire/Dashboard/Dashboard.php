@@ -11,12 +11,10 @@ class Dashboard extends Component
 
     public function mount()
     {
-        // Retrieve the authenticated user
-        $this->user = Auth::user();
-       
+        $this->user = Auth::user();  
     }
     public function render()
     {
-        return view('livewire.dashboard.dashboard');
+        return view('livewire.dashboard.dashboard')->layout('components.layouts.dashboard');
     }
 }
