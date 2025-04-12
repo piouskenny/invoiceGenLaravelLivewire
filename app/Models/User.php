@@ -23,6 +23,10 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function client() {
+        return $this->hasMany(Client::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
