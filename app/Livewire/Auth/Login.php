@@ -19,7 +19,7 @@ class Login extends Component
     {
         $this->validate();
 
-        if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
+        if (Auth::attempt(credentials: ['email' => $this->email, 'password' => $this->password])) {
             session()->flash('message', 'Login successful');
             $this->redirectRoute('dashboard');
         } else {
